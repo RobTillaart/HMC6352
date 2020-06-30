@@ -13,7 +13,7 @@
 #include <hmc6352.h>
 
 hmc6352 Compass(0x21);
-int x;
+int heading;
 
 
 void setup()
@@ -38,13 +38,13 @@ void loop()
   // without impact on the footprint of the lib.
   // this way one can ask a make a reading and fetch it a bit later.
   // TODO is it fast enough for IRQ ?
-  x = Compass.askHeading();
+  int x = Compass.askHeading();
   //Serial.print("Ask returns: ");
   //Serial.println(x);
 
-  x = Compass.readHeading();
-  Serial.print("ask & read : Degree : ");
-  Serial.println(x);
+  heading = Compass.readHeading();
+  Serial.print("ask & read : ");
+  Serial.println(heading);
 
   Compass.sleep();  // low energy mode
   delay(500);
@@ -52,7 +52,7 @@ void loop()
   // this is the simplest mode to use the library
   // suitable for 99.9% of all robots :)
   Compass.wakeUp();
-  Serial.print("getHeading : Degree : ");
+  Serial.print("getHeading : ");
   Serial.println(Compass.getHeading());
   Compass.sleep();
   delay(500);
