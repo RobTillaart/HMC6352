@@ -29,7 +29,7 @@
 
 
 #include "Arduino.h"
-#include "hmc6352"
+#include "hmc6352.h"
 
 
 
