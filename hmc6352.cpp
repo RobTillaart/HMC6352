@@ -82,6 +82,13 @@ bool hmc6352::begin()
 }
 
 
+bool hmc6352::isConnected()
+{
+  _wire->beginTransmission(_address);
+  return (_wire->endTransmission() == 0);
+}
+
+
 int hmc6352::getHeading()
 {
   int rv = askHeading();
