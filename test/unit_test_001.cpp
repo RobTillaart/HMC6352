@@ -105,7 +105,7 @@ unittest(test_setOutputModus)
   assertTrue(Compass.isConnected());
 
   // outputModus error
-  assertEqual(HMC6352_ERROR_PARAM1, Compass.setOutputModus(4));
+  assertEqual(HMC6352_ERROR_PARAM1, Compass.setOutputModus(5));
   assertEqual(HMC6352_ERROR_PARAM1, Compass.setOutputModus(255));
 }
 
