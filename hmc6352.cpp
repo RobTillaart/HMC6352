@@ -71,7 +71,7 @@ bool hmc6352::begin(uint8_t sda, uint8_t scl)
 #endif
 
 
-void hmc6352::begin()
+bool hmc6352::begin()
 {
   _wire->begin();
   if (! isConnected())
