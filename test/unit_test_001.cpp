@@ -87,14 +87,14 @@ unittest(test_setOperationalModus)
   assertTrue(Compass.isConnected());
 
   // mode error
-  assertEqual(HMC6352_ERROR_PARAM1, Compass.setOperationalModus(3, 1, true));
-  assertEqual(HMC6352_ERROR_PARAM1, Compass.setOperationalModus(255, 1, true));
+  assertEqual(HMC6352_ERROR_PARAM1, Compass.setOperationalModus((hmcMode)3, 1, true));
+  assertEqual(HMC6352_ERROR_PARAM1, Compass.setOperationalModus((hmcMode)255, 1, true));
 
   // freq error
-  assertEqual(HMC6352_ERROR_PARAM2, Compass.setOperationalModus(0, 0, true));
-  assertEqual(HMC6352_ERROR_PARAM2, Compass.setOperationalModus(0, 9, true));
-  assertEqual(HMC6352_ERROR_PARAM2, Compass.setOperationalModus(0, 11, true));
-  assertEqual(HMC6352_ERROR_PARAM2, Compass.setOperationalModus(0, 21, true));
+  assertEqual(HMC6352_ERROR_PARAM2, Compass.setOperationalModus((hmcMode)0, 0, true));
+  assertEqual(HMC6352_ERROR_PARAM2, Compass.setOperationalModus((hmcMode)0, 9, true));
+  assertEqual(HMC6352_ERROR_PARAM2, Compass.setOperationalModus((hmcMode)0, 11, true));
+  assertEqual(HMC6352_ERROR_PARAM2, Compass.setOperationalModus((hmcMode)0, 21, true));
 }
 
 
