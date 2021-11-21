@@ -19,5 +19,5 @@
   "license": "MIT",
   "frameworks": "arduino",
   "platforms": "*",
-  "headers": "hmc6352.h
+  "headers": "hmc6352.h"
 }
