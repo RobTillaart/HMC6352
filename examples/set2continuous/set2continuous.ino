@@ -4,7 +4,7 @@
 // PURPOSE: Reset HMC6352 to continuous mode without library
 
 
-#include "Wire.h"
+#include "hmc6352.h"
 
 int HMC = 0x21;
 int ledPin = 13;

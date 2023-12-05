@@ -5,7 +5,7 @@
 //          (esp if it is struck in continuous mode - Arduino)
 
 
-#include "Wire.h"
+#include "hmc6352.h"
 
 int HMC = 0x21;
 int ledPin = 13;
